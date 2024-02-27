@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #columns {
+      display: flex;
+      width: 100%;
+      height: 70vh;
+    }
+
+    .column {
+      flex: 1;
+      border: 1px solid #ccc;
+      margin: 5px;
+      box-sizing: border-box;
+    }
+
+    #buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <title>Color Generator</title>
+</head>
+<body>
+
+  <div id="buttons">
+    <button onclick="addColumn()">Add Column</button>
+  </div>
+
+  <div id="columns"></div>
+
+  <div id="buttons">
+    <button onclick="generateColors()">Generate Colors</button>
+  </div>
+
+  <script>
+    function addColumn() {
+      var columnsContainer = document.getElementById("columns");
+      var columns = document.querySelectorAll(".column");
+
+      
+      if (columns.length < 5) {
+        var newColumn = document.createElement("div");
+        newColumn.className = "column";
+        columnsContainer.appendChild(newColumn);
+      } else {
+        alert("Maximum 5 columns allowed!");
+      }
+    }
+
+    function generateColors() {
+      var columns = document.querySelectorAll(".column");
+
+      columns.forEach(function(column) {
+        var randomColor = getRandomColor();
+        column.style.backgroundColor = randomColor;
+      });
+    }
+
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+
+</body>
+</html>

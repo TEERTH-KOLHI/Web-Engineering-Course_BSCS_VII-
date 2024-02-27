@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Change and Alert</title>
+  <style>
+    body {
+      transition: background-color 0.5s;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hello, World!</h1>
+
+  <script>
+    function changeColor() {
+      // Generate a random color
+      var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+
+      // Change the background color of the body
+      document.body.style.backgroundColor = randomColor;
+    }
+
+    function showAlert() {
+      alert('Button Clicked!');
+    }
+  </script>
+
+  <button onclick="changeColor()">Change Color</button>
+  <button onclick="showAlert()">Show Alert</button>
+
+</body>
+</html>
