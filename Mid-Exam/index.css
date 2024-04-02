@@ -1,0 +1,13 @@
+.container {
+    position: relative;
+  }
+  
+  .container img:not(:first-child) {
+    display: none;
+  }
+  
+  .next {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+  }
