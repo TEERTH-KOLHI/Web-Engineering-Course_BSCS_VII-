@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+
+    <style>
+      body {
+        margin-top: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
+
+      .form-container {
+        border: 2px solid black ;
+        border-radius: 10px;
+        background-color: aqua;
+        width: 300px;
+        margin: 0 auto;
+      }
+
+      .form-container label {
+        display: inline-block;
+        width: 10px;
+        text-align: right;
+        margin-right: 70px;
+      }
+
+      .form-container input {
+        width: 180px;
+        background-color: lightcyan;
+        border-color: black;
+        border-width: 1px;
+        font-size: 75%;
+        
+        
+      }
+
+      #subbtn{
+        margin-left: 40px;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: black;
+        font-weight: bold;
+      }
+
+      #message{
+        width: 267px;
+      }
+
+      .form{
+        margin-top: 20px;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 300;
+
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <form class="form" action="/action_page.php">
+        <div>
+          <label for="username: " id="uname"> Username: </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter username"
+          /><br /><br />
+        </div>
+        <div>
+          <label for="email" id="em">Email:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Enter email"
+          /><br /><br />
+        </div>
+        <div>
+          <label for="subject" id="sub">Subject: </label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Enter subject"
+          /><br /><br />
+        </div>
+        <div>
+          <p> Please, write message in the given area.</p
+          >
+          <textarea name="message" id="message" cols="30" rows="10"></textarea
+          ><br /><br />
+        </div>
+        <div><input type="submit" name="subbtn" id="subbtn" /><br /><br /></div>
+      </form>
+    </div>
+  </body>
+</html>
