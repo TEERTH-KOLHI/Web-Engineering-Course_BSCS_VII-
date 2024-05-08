@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Practice</title>
+
+    <script>
+
+// Variables
+        // var myname = "Teerth Kolhi";
+
+        // var myname = "Parkash Kolhi";
+
+        // const myname = "Teerth Kolhi";
+        // const myname = "Parkash Kolhi";
+
+        // let myname = "Teerth kolhi";
+        // let myname = "Parkash Kolhi";
+
+// Objects
+
+        var person = {
+            name: "John",
+            age: 30,
+            city: "New Yark"
+
+        };
+
+    // using JSON.stringify()
+        //document.write(JSON.stringify(person));
+    //using for loop
+        for(let key in person){
+            //document.write(key + ": " + person[key]);
+        }
+
+    // using Object.entries()
+        Object.entries(person).forEach(([key, value]) =>{
+            //document.write(`${key}: ${value}`);
+        })
+
+
+        //document.write(person);
+
+// Switch statement
+var day = "Monday";
+switch(day){
+    case "Monday":
+        document.write("It's Monday!");
+        break;
+    case "Tuesday":
+        document.write("It's Tuesday!");
+        break;
+    default:
+        document.write("It's neither Monday nor Tuesday!!");
+}
+
+// Functions
+function greet(name){
+    //document.write("\nHello, " + name + "!");
+}
+greet("Teerth Kolhi");
+
+function showalert(){
+    alert("Hello, World!");
+}
+
+
+// let age = prompt('Enter your age ', 20);
+// if(age != null){
+//     document.write(`Your age is ${age}`);
+// }else{
+//     document.write('Age Field was Blank!');
+// }
+
+let response = confirm("Are you sure, You want to Delete?");
+if(response){
+    document.write('Deleted');
+}else{
+    document.write('Not Deleted');
+}
+
+    </script>
+</head>
+<body>
+
+    <h1>Click the button to see an alert</h1>
+    <button onclick="showalert()">Click Me</button>
+
+    
+    
+</body>
+</html>
